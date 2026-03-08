@@ -52,3 +52,6 @@
 Нажимает "Создать"  
       ↓  
 Событие появляется в календаре  
+### Проект базы данных
+<img width="841" height="667" alt="image" src="https://github.com/user-attachments/assets/af14b590-239d-4a3f-a887-a8c2a2c32cea" />
+
