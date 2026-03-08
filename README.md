@@ -52,7 +52,113 @@
 Нажимает "Создать"  
       ↓  
 Событие появляется в календаре  
-### Проект базы данных
-<img width="839" height="650" alt="image" src="https://github.com/user-attachments/assets/36375be9-1012-4ad7-a966-ff9f998b8900" />
+### Проект базы данных  
+<img width="839" height="650" alt="image" src="https://github.com/user-attachments/assets/36375be9-1012-4ad7-a966-ff9f998b8900" />  
 
-
+### Конечные точки на сервере и контракты данных   
+#### Авторизация  
+Запрос  
+```json
+{
+ "username": "stepa",
+ "email": "stepa@mail.com",
+ "password": "123456"
+}
+```
+Ответ  
+```json
+{
+ "message": "User created",
+ "user_id": 1
+}
+```  
+#### Получение постов  
+```json
+{
+  "id": 1,
+  "author": "stepa",
+  "content": "Привет лицеистам!",
+  "created_at": "2026-03-08"
+}
+```  
+#### Создание поста  
+Запрос
+```json
+{
+ "author_id": 1,
+ "content": "Сегодня будет встреча клуба программирования"
+}
+```
+Ответ
+```json
+{
+ "message": "Post created",
+ "post_id": 5
+}
+```
+#### Получить комментарии поста
+```json
+{
+  "id": 1,
+  "author": "ivan",
+  "content": "Круто!",
+  "created_at": "2026-03-08"
+}
+ ```
+#### Добавить комментарий
+Запрос
+```json
+{
+ "post_id": 1,
+ "author_id": 2,
+ "content": "Отличный пост!"
+}
+```
+Ответ
+```json
+{
+ "message": "Comment created",
+ "comment_id": 10
+}
+```
+#### Получить список групп
+```json
+{
+  "id": 1,
+  "name": "Клуб программирования",
+  "description": "Для тех, кто любит код"
+}
+```
+#### Создать группу
+Запрос
+```json
+{
+ "name": "Клуб робототехники",
+ "description": "Создаем роботов",
+ "creator_id": 1
+}
+```
+Ответ
+```json
+{
+ "message": "Group created",
+ "group_id": 4
+}
+```
+#### Получить мероприятия
+```json
+[
+ {
+  "id": 1,
+  "title": "Хакатон",
+  "description": "Соревнование программистов",
+  "date": "2026-04-10"
+ },
+ {
+  "id": 2,
+  "title": "Шахматный турнир",
+  "description": "Турнир среди учеников",
+  "date": "2026-04-15"
+ }
+]
+```
